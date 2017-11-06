@@ -7,15 +7,16 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find(params[:id])
-  end
-
-  def activate
-    @student = Student.find(params[:id])
     if @student.active == false
       @message = "This student is currently inactive."
     else
       @message = "This student is currently active."
-    en
+    end
+  end
+
+  def activate
+    @student = Student.find(params[:id])
+  
     @student.save
     redirect_to student_path(@student)
   end
