@@ -19,7 +19,7 @@ class StudentsController < ApplicationController
     if @student.active == true #Should mark an active student as inactive
       @student.active = false
     else
-      @student.active = true #Should mark an inactive stuent as active
+      @student.active = true #Should mark an inactive student as active
     end
     @student.save
     redirect_to student_path(@student)
