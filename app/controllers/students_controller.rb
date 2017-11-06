@@ -11,7 +11,7 @@ class StudentsController < ApplicationController
 
   private
 
-    def set_student
+    def activate
       @student = Student.find(params[:id])
     end
 end
